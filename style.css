@@ -243,14 +243,18 @@ body {
   margin: 0;
 }
 
-.our-portfolio-card {
-  width: calc(33.333% - 20px); /* Her satıra 3 tane sığacak şekilde */
-  box-sizing: border-box;
-}
+
 .portfolio-info {
   border: 1px solid var(--cornflower); /* örnek: siyah kenarlık */
   padding: 32px 16px;
   gap: 8px;
+}
+
+.our-portfolio-card {
+  width: calc(33.333% - 20px); /* 3 sütunlu grid için */
+  margin: 10px;
+  box-sizing: border-box;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 .our-portfolio-card img {
