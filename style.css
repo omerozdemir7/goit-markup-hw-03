@@ -22,11 +22,19 @@
   padding: 0;
 }
 
+body,
+html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
 body {
-  margin: 0 auto;
   padding-top: 72px;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+  height: 3300px;
 }
 
 /* Navbar */
@@ -102,13 +110,11 @@ body {
   display: flex;
   gap: 20px;
   list-style: none;
-
-  justify-content: flex-end;
-  flex: 1;
   position: absolute;
   left: 940px;
   top: 25px;
   margin: 0 auto;
+  padding: 0;
 }
 
 .address ul li a {
@@ -125,7 +131,7 @@ body {
   background-color: #2e2f42;
   max-width: 1200px;
   height: 600px;
-  margin: 0 auto;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -159,41 +165,53 @@ body {
 /* Section 1 */
 .section1 {
   display: flex;
-
   max-width: 1228px;
   margin: 40px auto;
   padding: 20px;
-  gap: 20px;
+
   align-items: center;
+  margin-top: 100px;
 }
 
 .section1 ul {
   list-style: none;
 }
 
+.section1 ul li {
+  font-weight: 400px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  width: 264px;
+}
+
 /* Our Team */
 .our-team {
   background-color: #f4f4fd;
-  padding: 60px 40px;
+  padding: 50px 40px;
   text-align: center;
-  max-width: 1440px;
-  margin: 0 auto;
+  width: 1440px;
+
   min-height: 600px;
+  top: 1016px;
+  position: static;
+  margin-top: 100px;
 }
 
-.our-team h2 {
+.our-team-h2 {
   font-size: 36px;
   margin-bottom: 40px;
   color: #2e2f42;
+
+  width: 162px;
+  font-weight: 700px;
+  line-height: 40px;
+  letter-spacing: 2%;
+  margin-top: 30px;
 }
 
 .our-team-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
-
-  width: 100%;
-  height: auto;
 }
 .team-info {
   height: 96px;
@@ -201,79 +219,101 @@ body {
 }
 
 .team-member {
-  width: 100%;
   max-width: 264px;
   background-color: #ffffff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  gap: 32px;
 }
 
+/* OUR PORTFOLIO BÖLÜMÜ */
 .our-portfolio {
   width: 1128px;
-  height: 1000px;
-  margin: 0 auto;
-  text-align: center;
+  margin-top: 120px;
+
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .our-portfolio h2 {
-  display: block;
-  margin: 0 auto;
-  width: fit-content;
-  font-family: var(--font-family);
   font-weight: 700;
   font-size: 36px;
-  line-height: 111%;
-  letter-spacing: 0.02em;
-  text-align: center;
-  color: var(--navy-blue);
+  line-height: 40px;
+  letter-spacing: 2%;
+  width: 218px;
+  height: 40px;
+  margin: 0 auto 40px auto; /* Ortala ve alt boşluk bırak */
+  position: relative; /* Mutlaka top, left, right vermiyorsan absolute kaldır */
 }
 
+/* Satırlar */
 .our-portfolio-list {
   display: flex;
-  flex-wrap: wrap; /* Satır satır dizilmesini sağlar */
+  flex-direction: column;
+  align-items: center;
+  gap: 40px; /* satırlar arası boşluk */
+  margin-top: 100px; /* bütün listeyi aşağı çek */
+}
 
-  list-style: none;
-  justify-content: center; /* Ortaya hizalar */
-  padding: 0;
+.our-portfolio-list-row-1,
+.our-portfolio-list-row-2 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px; /* kartlar arası boşluk */
   margin: 0;
 }
 
-
-.portfolio-info {
-  border: 1px solid var(--cornflower); /* örnek: siyah kenarlık */
-  padding: 32px 16px;
-  gap: 8px;
-}
-
 .our-portfolio-card {
-  width: calc(33.333% - 20px); /* 3 sütunlu grid için */
-  margin: 10px;
+  width: 360px;
+  border: 1px solid var(--cornflower);
   box-sizing: border-box;
-  background-color: rgba(255, 255, 255, 1);
+  background-color: white;
+  list-style: none;
+  margin-bottom: -20px;
 }
 
+/* Görsel */
 .our-portfolio-card img {
+  width: 100%;
   height: 300px;
   object-fit: cover;
+  display: block;
+  border: 1px;
+}
+
+/* Kart içeriği */
+.portfolio-info {
+  padding: 32px 16px;
+  border-bottom: 1px solid var(--cornflower);
+
+  flex-direction: column;
+  gap: 8px;
+
+  text-align: left; /* Metin hizalaması sağ */
+}
+.portfolio-info p {
+  margin-top: 12px;
 }
 
 /* Footer başlangıç */
 
 .footer {
-  background-color: #2e2f42;
+  width: 100%;
+  background-color: var(--navy-blue);
   padding: 60px 40px;
   color: white;
+  margin-top: auto; /*footer hep en alta yapışır */
+  /* Footer içeriği genişliği ve ortalaması için */
   max-width: 1440px;
-  align-items: center;
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
 }
+
 .footer .logo a {
-  color: #4d5ae5;
+  font-family: var(--second-family);
+  color: var(--iris);
   text-decoration: none;
   margin-bottom: 20px;
   display: block;
@@ -289,16 +329,15 @@ body {
 }
 
 .footer p {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-family);
   color: white;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.02px;
   width: 264px;
   height: 112px;
   text-align: justify;
   margin-left: 156px;
-  position: static;
 }
 /* Footer Bitiş */
