@@ -36,8 +36,15 @@ body {
   font-family: "Roboto", sans-serif;
   height: 3300px;
 }
+.container {
+  max-width: 1158px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+}
 
-/* Navbar */
+/* Navbar başlangıç */
 .navbar-wrapper {
   width: 100%;
   position: fixed;
@@ -69,14 +76,16 @@ body {
   text-decoration: none;
   position: absolute;
   top: 24px;
-  left: 156px;
+  left: 20px;
   margin: 0 auto;
 }
 
 .logo-header span {
   color: #2e2f42;
 }
+/* Navbar başlangıç */
 
+/* menu Başlangıç */
 .menu {
   list-style: none;
   display: flex;
@@ -87,7 +96,7 @@ body {
   flex: 1;
   justify-content: center;
   position: absolute;
-  left: 347px;
+  left: 220px;
   top: 24px;
 }
 
@@ -111,7 +120,7 @@ body {
   gap: 20px;
   list-style: none;
   position: absolute;
-  left: 940px;
+  left: 990px;
   top: 25px;
   margin: 0 auto;
   padding: 0;
@@ -125,8 +134,9 @@ body {
 .address ul li a:hover {
   color: #404bbf;
 }
+/* menu Bitiş */
 
-/* Hero */
+/* Hero Başlangıç */
 .hero-image {
   background-color: #2e2f42;
   max-width: 1200px;
@@ -148,7 +158,7 @@ body {
   line-height: 1.2;
 }
 
-.hero-image > button {
+.container> button {
   margin-top: 40px;
   background-color: #4d5ae5;
   color: white;
@@ -161,31 +171,52 @@ body {
 .hero-image > button:hover {
   background-color: #404bbf;
 }
+/* Hero Bitiş */
 
-/* Section 1 */
-.section1 {
+/* Section 1 Başlangıç */
+.section1 .container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
   max-width: 1228px;
-  margin: 40px auto;
+  margin: 100px auto 40px auto;
   padding: 20px;
-
-  align-items: center;
-  margin-top: 100px;
+  box-sizing: border-box;
 }
 
 .section1 ul {
   list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 264px;
+  height: 72px;
+  
 }
 
 .section1 ul li {
-  font-weight: 400px;
+  font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  letter-spacing: 2%;
-  width: 264px;
+  letter-spacing: 0.5px;
+  
+  
 }
 
-/* Our Team */
+.section1 h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.section1 p {
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 2%;
+  
+}
+
+/* Section 1 Bitiş */
+
+/* Our Team Başlangıç */
 .our-team {
   background-color: #f4f4fd;
   padding: 50px 40px;
@@ -226,8 +257,9 @@ body {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   gap: 32px;
 }
+/* Our Team Bitiş */
 
-/* OUR PORTFOLIO BÖLÜMÜ */
+/* Our Portfolio Başlangıç */
 .our-portfolio {
   width: 1128px;
   margin-top: 120px;
@@ -244,8 +276,8 @@ body {
   letter-spacing: 2%;
   width: 218px;
   height: 40px;
-  margin: 0 auto 40px auto; /* Ortala ve alt boşluk bırak */
-  position: relative; /* Mutlaka top, left, right vermiyorsan absolute kaldır */
+  margin: 0 auto 40px auto;
+  position: relative;
 }
 
 /* Satırlar */
@@ -253,18 +285,21 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px; /* satırlar arası boşluk */
-  margin-top: 100px; /* bütün listeyi aşağı çek */
+  gap: 40px; 
+  margin-top: 100px;
 }
 
 .our-portfolio-list-row-1,
 .our-portfolio-list-row-2 {
   display: flex;
   flex-wrap: wrap;
-  gap: 24px; /* kartlar arası boşluk */
+  gap: 24px; 
   margin: 0;
 }
-
+.our-portfolio-list-row-1{
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
 .our-portfolio-card {
   width: 360px;
   border: 1px solid var(--cornflower);
@@ -274,7 +309,7 @@ body {
   margin-bottom: -20px;
 }
 
-/* Görsel */
+
 .our-portfolio-card img {
   width: 100%;
   height: 300px;
@@ -283,7 +318,6 @@ body {
   border: 1px;
 }
 
-/* Kart içeriği */
 .portfolio-info {
   padding: 32px 16px;
   border-bottom: 1px solid var(--cornflower);
@@ -291,11 +325,12 @@ body {
   flex-direction: column;
   gap: 8px;
 
-  text-align: left; /* Metin hizalaması sağ */
+  text-align: left; 
 }
 .portfolio-info p {
   margin-top: 12px;
 }
+/* Our Portfolio Bitiş */
 
 /* Footer başlangıç */
 
@@ -304,11 +339,10 @@ body {
   background-color: var(--navy-blue);
   padding: 60px 40px;
   color: white;
-  margin-top: auto; /*footer hep en alta yapışır */
-  /* Footer içeriği genişliği ve ortalaması için */
+  margin-top: auto; 
+  
   max-width: 1440px;
-  margin-left: auto;
-  margin-right: auto;
+ 
 }
 
 .footer .logo a {
@@ -317,7 +351,7 @@ body {
   text-decoration: none;
   margin-bottom: 20px;
   display: block;
-  margin-left: 156px;
+  margin-left: 20px;
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
@@ -338,6 +372,6 @@ body {
   width: 264px;
   height: 112px;
   text-align: justify;
-  margin-left: 156px;
+  margin-left: 20px;
 }
 /* Footer Bitiş */
