@@ -11,11 +11,11 @@
   --grey: rgba(46, 47, 66, 0.7);
   --white: #fff;
   --dairy: #fcfcfc;
-}
-:root {
+
   --font-family: "Roboto", sans-serif;
   --second-family: "Raleway", sans-serif;
 }
+
 
 * {
   margin: 0 auto;
@@ -34,21 +34,15 @@ body {
   padding-top: 72px;
   box-sizing: border-box;
   font-family: var(--font-family);
+  overflow-x: hidden;
   height: auto;
-}
-.container {
-  max-width: 1158px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
 }
 
 /* Navbar başlangıç */
 .navbar-wrapper {
   width: 100%;
   height: 72px;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: 1000;
@@ -69,7 +63,7 @@ body {
   text-decoration: none;
   position: absolute;
   top: 24px;
-  left: 20px;
+  left: 156px;
   margin: 0 auto;
 }
 
@@ -84,7 +78,7 @@ body {
   display: flex;
   gap: 40px;
   position: absolute;
-  left: 220px;
+  left: 347px;
   top: 24px;
 }
 
@@ -92,7 +86,7 @@ body {
   font-family: var(--font-family);
   font-weight: 500;
   font-size: 16px;
-  color: #2e2f42;
+  color: var(--navy-blue);
   text-decoration: none;
 }
 .menu li a:hover {
@@ -108,14 +102,14 @@ body {
   gap: 20px;
   list-style: none;
   position: absolute;
-  left: 990px;
+  left: 1133px;
   top: 25px;
   margin: 0 auto;
   padding: 0;
 }
 
 .address ul li a {
-  color: #434455;
+  color: var(--slate);
   text-decoration: none;
   display: flex;
   
@@ -128,19 +122,28 @@ body {
 /* Hero Başlangıç */
 .hero-image {
   background-color: var(--navy-blue);
-  max-width: 1200px;
+  width: 100%; /* Tüm sayfa boyunca */
   height: 600px;
-
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding: 0 160px;
 }
 
+.hero-image .container {
+  width: 1440px;
+  
+  padding: 0 40px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+
 .hero-image .text {
-  color: white;
+  color: var(--white);
   font-size: 56px;
   max-width: 496px;
   margin: 0;
@@ -150,7 +153,7 @@ body {
 .container> button {
   margin-top: 40px;
   background-color: var(--iris);
-  color: white;
+  color: var(--white);
   padding: 16px 32px;
   border: none;
   border-radius: 4px;
@@ -166,14 +169,15 @@ body {
 
 /* Section 1 Başlangıç */
 .section1 .container {
-  display: flex;
-  flex-wrap: wrap;
+  display: flex;                 
+  flex-wrap: wrap;               
   justify-content: space-between;
-  max-width: 1228px;
-  margin: 100px auto 40px auto;
-  padding: 20px;
-  box-sizing: border-box;
+  max-width: 1228px;             
+  margin: 100px auto 40px auto;  
+  padding: 20px;                 
+  box-sizing: border-box;       
 }
+
 
 .section1 ul {
   list-style: none;
@@ -189,6 +193,7 @@ body {
   font-size: 16px;
   line-height: 24px;
   letter-spacing: 0.5px;
+  color: var(--slate);
   
   
 }
@@ -196,12 +201,14 @@ body {
 .section1 h3 {
   font-size: 20px;
   margin-bottom: 10px;
+  color: var(--navy-blue);
 }
 
 .section1 p {
   font-size: 14px;
   line-height: 24px;
-  letter-spacing: 2%;
+  letter-spacing: 0.02px;
+  color: var(--slate);
   
 }
 
@@ -210,23 +217,30 @@ body {
 /* Our Team Başlangıç */
 .our-team {
   background-color: var(--cloud);
-  padding: 50px 40px;
+  width: 100%;              /* Arka plan tam ekran */
+  padding: 50px 0;
   text-align: center;
-  width: 1440px;
-
-  min-height: 600px;
-  top: 1016px;
-  position: static;
   margin-top: 100px;
+  min-height: 600px;
+}
+
+.our-team .container {
+  max-width: 1200px;         /* hero-image ile aynı genişlik */
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 40px;
+  box-sizing: border-box;
+  
 }
 
 .our-team-h2 {
   font-size: 36px;
   margin-bottom: 40px;
-  color: #2e2f42;
+  color: var(--navy-blue);
 
   width: 162px;
-  font-weight: 700px;
+  font-weight: 700;
+
   line-height: 40px;
   letter-spacing: 2%;
   margin-top: 30px;
@@ -234,16 +248,24 @@ body {
 
 .our-team-list {
   display: flex;
+  gap: 32px;
+  margin-top: 100px;
 }
 .team-info {
   height: 96px;
   margin-top: 20px;
 }
+.team-info h3{
+  color: var(--navy-blue);
+}
+.team-info p{
+  color: var(--slate);
+}
 
 .team-member {
   max-width: 264px;
   background-color: var(--white);
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
   gap: 32px;
@@ -252,20 +274,22 @@ body {
 
 /* Our Portfolio Başlangıç */
 .our-portfolio {
+  height: 1000px;
   width: 100%;
   max-width: 1128px;
   margin: 0 auto;
-  padding: 150px 0; /* üst-alt ve yan boşluklar */
+  padding: 100px 0; /* üst-alt ve yan boşluklar */
 }
 .our-portfolio h2 {
   font-weight: 700;
   font-size: 36px;
   line-height: 40px;
-  letter-spacing: 2%;
+  
   width: 218px;
   height: 40px;
   margin: -30px auto 40px auto;
   position: relative;
+  color: var(--navy-blue);
 }
 
 /* Satırlar */
@@ -273,8 +297,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 180px;
   
-  margin-top: 100px;
   
 }
 
@@ -322,25 +346,34 @@ body {
 
   text-align: left; 
 }
-
+.portfolio-info h3{
+  color: var(--navy-blue);
+}
 .portfolio-info p {
   margin-top: 12px;
+  color: var(--slate);
 }
 /* Our Portfolio Bitiş */
 
 /* Footer başlangıç */
 
 .footer {
-  width: 100%;
+  width: 1440px;
   background-color: var(--navy-blue);
-  padding: 0 40px;
   color: var(--white);
-  margin-top: auto; 
+  margin-top: 125px;
   height: 312px;
-  max-width: 1440px;
-  
- 
+  padding: 0 40px;
 }
+
+/* İçerik sınırı */
+.footer .container {
+  
+  max-width: 1228px;
+ 
+  
+}
+
 
 .footer .logo a {
   font-family: var(--second-family);
