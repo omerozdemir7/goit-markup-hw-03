@@ -16,7 +16,6 @@
   --second-family: "Raleway", sans-serif;
 }
 
-
 * {
   margin: 0 auto;
   padding: 0;
@@ -26,7 +25,7 @@ body,
 html {
   margin: 0;
   padding: 0;
-  
+
   display: flex;
   flex-direction: column;
 }
@@ -42,6 +41,7 @@ body {
 .navbar-wrapper {
   width: 100%;
   height: 72px;
+  padding-left: 80px;
   position: absolute;
   top: 0;
   left: 0;
@@ -112,7 +112,6 @@ body {
   color: var(--slate);
   text-decoration: none;
   display: flex;
-  
 }
 .address ul li a:hover {
   color: #404bbf;
@@ -122,7 +121,7 @@ body {
 /* Hero Başlangıç */
 .hero-image {
   background-color: var(--navy-blue);
-  width: 100%; /* Tüm sayfa boyunca */
+  width: 100%;
   height: 600px;
   display: flex;
   justify-content: center;
@@ -132,15 +131,13 @@ body {
 
 .hero-image .container {
   width: 1440px;
-  
+
   padding: 0 40px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
-
 
 .hero-image .text {
   color: var(--white);
@@ -150,7 +147,7 @@ body {
   line-height: 1.2;
 }
 
-.container> button {
+.container > button {
   margin-top: 40px;
   background-color: var(--iris);
   color: var(--white);
@@ -169,15 +166,14 @@ body {
 
 /* Section 1 Başlangıç */
 .section1 .container {
-  display: flex;                 
-  flex-wrap: wrap;               
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  max-width: 1228px;             
-  margin: 100px auto 40px auto;  
-  padding: 20px;                 
-  box-sizing: border-box;       
+  max-width: 1228px;
+  margin: 100px auto 40px auto;
+  padding: 20px;
+  box-sizing: border-box;
 }
-
 
 .section1 ul {
   list-style: none;
@@ -185,7 +181,6 @@ body {
   margin: 0;
   width: 264px;
   height: 72px;
-  
 }
 
 .section1 ul li {
@@ -194,8 +189,6 @@ body {
   line-height: 24px;
   letter-spacing: 0.5px;
   color: var(--slate);
-  
-  
 }
 
 .section1 h3 {
@@ -209,7 +202,6 @@ body {
   line-height: 24px;
   letter-spacing: 0.02px;
   color: var(--slate);
-  
 }
 
 /* Section 1 Bitiş */
@@ -217,7 +209,7 @@ body {
 /* Our Team Başlangıç */
 .our-team {
   background-color: var(--cloud);
-  width: 100%;              /* Arka plan tam ekran */
+  width: 100%;
   padding: 50px 0;
   text-align: center;
   margin-top: 100px;
@@ -225,12 +217,11 @@ body {
 }
 
 .our-team .container {
-  max-width: 1200px;         /* hero-image ile aynı genişlik */
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
   padding: 0 40px;
   box-sizing: border-box;
-  
 }
 
 .our-team-h2 {
@@ -255,10 +246,10 @@ body {
   height: 96px;
   margin-top: 20px;
 }
-.team-info h3{
+.team-info h3 {
   color: var(--navy-blue);
 }
-.team-info p{
+.team-info p {
   color: var(--slate);
 }
 
@@ -278,13 +269,13 @@ body {
   width: 100%;
   max-width: 1128px;
   margin: 0 auto;
-  padding: 100px 0; /* üst-alt ve yan boşluklar */
+  padding: 100px 0; /* üst-alt ve yan boşluklar (üst, sağ, alt, sol)*/
 }
 .our-portfolio h2 {
   font-weight: 700;
   font-size: 36px;
   line-height: 40px;
-  
+
   width: 218px;
   height: 40px;
   margin: -30px auto 40px auto;
@@ -298,8 +289,6 @@ body {
   flex-direction: column;
   align-items: center;
   margin-top: 180px;
-  
-  
 }
 
 .our-portfolio-list-row-1,
@@ -309,13 +298,11 @@ body {
   gap: 24px;
   margin: 0;
   justify-content: center;
-  
 }
-.our-portfolio-list-row-1{
+.our-portfolio-list-row-1 {
   margin-top: -50px;
-  
 }
-.our-portfolio-list-row-2{
+.our-portfolio-list-row-2 {
   margin-top: 80px;
 }
 .our-portfolio-card {
@@ -325,9 +312,7 @@ body {
   background-color: var(--white);
   list-style: none;
   margin-bottom: -20px;
-  
 }
-
 
 .our-portfolio-card img {
   width: 100%;
@@ -344,9 +329,9 @@ body {
   flex-direction: column;
   gap: 8px;
 
-  text-align: left; 
+  text-align: left;
 }
-.portfolio-info h3{
+.portfolio-info h3 {
   color: var(--navy-blue);
 }
 .portfolio-info p {
@@ -368,12 +353,8 @@ body {
 
 /* İçerik sınırı */
 .footer .container {
-  
   max-width: 1228px;
- 
-  
 }
-
 
 .footer .logo a {
   font-family: var(--second-family);
